@@ -10,26 +10,25 @@
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 	<!-- FONT AWESOME -->
 	<script src="https://kit.fontawesome.com/fc2f1695bc.js" crossorigin="anonymous"></script>
+    <!-- CUSTOM JS -->
+    <script src="js/vanilla-tilt.min.js"></script>
     <title>Comunidad SCUM CHILE</title>
 </head>
 <body>
     <header>
         <nav class="nav">
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
             <a href="" class="nav__logo">
                 <img src="img/logo.png" alt="SCUM CHILE">
             </a>
             <ul class="nav__ul">
-                <li class="nav__li"><a href="reglas.html">REGLAS</a></li>
-                <li class="nav__li donation"><a href="#">DONACIONES</a></li>
-            </ul>
-        <!-- NAV RESPONSIVE -->
-            <ul class="nav__responsive-ul">
-                <a href="" class="nav__logo-r"><img src="img/logo.png" alt="SCUM CHILE"></a>
-                <div class="nav__responsive_button fas fa-bars"></div>
-                <div class="nav__li-container">
-                    <li class="nav__responsive-li"><a href="reglas.html">REGLAS</a></li>
-                    <li class="nav__responsive-li donation"><a href="#">DONACIONES</a></li>
-                </div>
+                <li class="nav__li"><a href="Reglas.html">REGLAS</a></li>
+                <!-- <li class="nav__li"><a href="Multimedia.html">MULTIMEDIA</a></li>
+                <li class="nav__li"><a href="Mapa.html">MAPA INTERACTIVO</a></li> -->
+                <li class="nav__li"><a href="#" class="donation">DONACIONES</a></li>
             </ul>
         </nav>
     </header>
@@ -169,6 +168,16 @@
             </div>
         </div>
     </section>
+
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".Contain_community .community a"), {
+		max: 30,
+		speed: 400,
+        glare: true,
+        scale: 1,
+        "max-glare": 0.6
+	    })
+    </script>
 
     <!-- FOOTER -->
     <footer class="Container_footer">
