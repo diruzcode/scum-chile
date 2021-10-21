@@ -784,6 +784,177 @@
 
 
 
+@media only screen and (max-width: 700px) {
+	.body {
+		width: 100%;
+	}
+	.nav {
+		width: 100%;
+		max-height: 60px;
+	}
+	.nav__logo {
+		margin-left: 5%;
+		width: 80px;
+	}
+	.nav__logo img {
+		width: 100%;
+		height: 100%;
+	}
+	.checkbtn {
+		margin-right: 25px;
+		line-height: 60px;
+	}
+
+
+	/* HOME */
+	.Container_home {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		max-width: 100%;
+	}
+	.RRSS {
+		display: none;
+	}
+	.titulo_home {
+		max-width: 300px;
+		padding: 0;
+		margin: 0 auto 40px;
+	}
+	.title_home1 {
+		font-size: 2.2em;
+	}
+	.title_home2 {
+		font-size: 3em;
+		margin-left: 115px;
+		text-shadow: -2px 3px 2px rgba(0, 0, 0, 0.4);
+	}
+	.title_home2::before {
+		content: '';
+		position: absolute;
+		width: 115px;
+		height: 7px;
+		background-color: currentColor;
+		box-shadow: -2px 3px 2px rgba(0, 0, 0, 0.4);
+		top: .6em;
+		left: -130px;
+	}
+	.title_home3 {
+		font-size: 4.7em;
+	}
+	.txt_titulo {
+		font-size: 15px;
+		line-height: 24px;
+	}
+	.txt_titulo::before {
+		content: '';
+		position: absolute;
+		width: 178px;
+		height: 9px;
+		top: 1.65em;
+		left: 113px;
+		background-color: rgba(167, 81, 255, 0.7);
+		mix-blend-mode: multiply;
+	}
+
+
+	/* INFO SERVER */
+	.Container_server {
+		display: block;
+		justify-content: center;
+		align-items: center;
+		max-width: 100%;
+	}
+	.txt_details {
+		font-size: 14px;
+		line-height: 25px;
+		text-align: center;
+		margin: 0 50px;
+	}
+	.server_details, .server_events, .bg_events {
+		width: 100%;
+	}
+	.detail_events {
+		padding: 20px;
+		width: 100%;
+	}
+	.detail_events h3 {
+		font-size: 1.5em;
+		text-align: center;
+	}
+	.detail_events li {
+		font-size: 14px;
+		text-align: left;
+	}
+
+
+	/* SQUADS */
+	.Section_squads {
+		max-width: 100%;
+	}
+	.Section_squads h1 {
+		font-size: 2em;
+	}
+	.Section_squads h1 span {
+		font-size: 0.8em;
+	}
+	.Section_squads h1::after {
+		content: '';
+		position: absolute;
+		width: 230px;
+		height: 10px;
+		margin-top: -14px;
+		left: 30%;
+		background-color: #ffc700;
+	}
+	.Card {
+		width: 150px;
+		height: 150px;
+	}
+
+
+	/* FOLLOW */
+	.Container_community h1 {
+		color: #5f5f5f;
+		font-size: 2em;
+		margin-left: 20px;
+	}
+	.Container_community h1 span {
+		font-size: 1.4em;
+	}
+	.Container_community h1::after {
+		content: '';
+		position: absolute;
+		width: 380px;
+		height: 20px;
+		left: 70px;
+		margin-top: 34px;
+		background-color: rgba(167, 81, 255, 0.8);
+		mix-blend-mode: multiply;
+	}
+	.Contain_community {
+		padding: 60px 0 0;
+	}
+	.community {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		margin: 0 40px;
+	}
+	.community a {
+		margin: 0;
+	}
+	.community a .Card_discord, .community a .Card_steam, .community a .Card_telegram {
+		text-align: center;
+		color: #fff;
+		border-radius: 15px;
+		width: 160px;
+		height: 200px;
+	}
+}
+
+
 
 /* SQUADS */
 .Section_squads{
