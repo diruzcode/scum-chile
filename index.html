@@ -10,6 +10,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 	<!-- FONT AWESOME -->
 	<script src="https://kit.fontawesome.com/fc2f1695bc.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- CUSTOM JS -->
     <script src="js/vanilla-tilt.min.js"></script>
     <title>Comunidad SCUM CHILE</title>
@@ -52,15 +53,33 @@
         </div>
     </section>
 
+    <!-- NUMBERS OF SERVER -->
+    <section class="Container_server">
+        <h2 class="title_server">PROMEDIO JUGADORES EL ULTIMO MES EN SCUM CHILE</h1>
+            <div class="description_server">
+                <div class="server_details">
+                    <div class="banner_server">
+                        <div>
+                            <canvas id="myChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
     <!-- SECTION INFO SERVER -->
     <section class="Container_server">
         <h2 class="title_server">COMUNIDAD SCUM CHILE</h1>
         <div class="description_server">
             <div class="server_details">
-                <div class="banner_server">
-                    <script type="application/javascript">window.addEventListener('message',function(e){if(e.data.uid&&e.data.type==='sizeUpdate'){var i = document.querySelector('iframe[name="'+e.data.uid+'"]');i.style.width = e.data.payload.width;i.style.height = e.data.payload.height;}});</script><iframe src="https://cdn.battlemetrics.com/b/standardVertical/11449879.html?foreground=%235f5f5f&linkColor=%236800c0&lines=%231b1b1b&background=%23eeeeee&chart=players%3A7D&chartColor=%2335a705&showPlayers=&maxPlayersHeight=300" frameborder=0 style="border:0" name="nmbtw"></iframe>
-                </div>
                 <p class="txt_details">
+                    <strong><i class="fas fa-hand-point-right"></i> Usuario actualmente conectados : </strong> <span id="players"></span><br>
+                    <strong><i class="fas fa-hand-point-right"></i> Ranking actual : </strong> <span id="ranking"></span> <br>
+                    <strong><i class="fas fa-hand-point-right"></i> Version : </strong> <span id="version"></span> <br>
+                    <strong><i class="fas fa-hand-point-right"></i> Hora actual en el servidor : </strong> <span id="time"></span> <br>
+                    <strong><i class="fas fa-hand-point-right"></i> Maximo de players permitidos : </strong> <span id="maxPlayers"></span> <br>
+
+                    <strong><i class="fas fa-hand-point-right"></i> </strong> Información obtenida desde <a href="https://www.battlemetrics.com/servers/scum/11449879" target="_blank">battlemetrics</a> <br>
                     <strong><i class="fas fa-hand-point-right"></i> NO BOTS</strong> <br>
                     <strong><i class="fas fa-hand-point-right"></i> Último Wipe : </strong> 29/07/2021 <br>
                     <strong><i class="fas fa-hand-point-right"></i> Límine de miembros por squad : </strong> 13 players <br>
@@ -186,6 +205,77 @@
         scale: 1,
         "max-glare": 0.6
 	    })
+
+        const dataChart = {
+            labels: [],
+            datasets: [{
+                label: 'dsdsdsdsdfsdfs',
+                backgroundColor: 'rgb(255, 99, 132)',
+                borderColor: 'rgb(255, 99, 132)',
+                data: [],
+            }]
+        };
+
+        const config = {
+            type: 'line',
+            data: dataChart,
+            options: {}
+        };
+        
+
+        const processData = function (data) {
+            const arrayProm = {};
+            let lastDate = '';
+            data.forEach(element => {
+                const date = element.attributes.timestamp.split('T')[0];
+                dataChart.labels.push(date)
+                dataChart.datasets[0].data.push(element.attributes.max)
+            });
+
+            new Chart(
+                document.getElementById('myChart'),
+                config
+            );
+        }
+
+
+        const headers = { method: 'GET',
+                    headers: new Headers(),
+                    mode: 'cors',
+                    cache: 'default' };
+        const initDate = new Date();
+        initDate.setMonth(initDate.getMonth() - 1);
+        const endDate = new Date();
+        const HistoryServer = new Request(`https://api.battlemetrics.com/servers/11449879/player-count-history?start=${initDate.toISOString().split('T')[0]}T00%3A00%3A00.000Z&stop=${endDate.toISOString().split('T')[0]}T00%3A00%3A00.000Z&resolution=1440`, headers);
+
+        fetch(HistoryServer).then(function(response) {
+            return response.json();
+        }).then(function (data) {
+            if(data.data){
+                const sortedDataByDate = data.data.sort((a, b) => new Date(a.attributes.timestamp) - new Date(b.attributes.timestamp))
+                processData(sortedDataByDate)
+            }else{
+                console.log("UPS!!")
+            }
+        });
+
+
+        const InfoServer = new Request('https://api.battlemetrics.com/servers/11449879', headers);
+
+        fetch(InfoServer).then(function (response) {
+            return response.json();
+        }).then(function (data) {
+            if (data.data) {
+                document.getElementById('players').textContent = data.data.attributes.players;
+                document.getElementById('ranking').textContent = `#${data.data.attributes.rank}`;
+                document.getElementById('version').textContent = `${data.data.attributes.details.version}`;
+                document.getElementById('time').textContent = `${data.data.attributes.details.time} hrs`;
+                document.getElementById('maxPlayers').textContent = `${data.data.attributes.maxPlayers}`;
+            } else {
+                console.log("UPS!!")
+            }
+        });
+        
     </script>
 
     <!-- FOOTER -->
