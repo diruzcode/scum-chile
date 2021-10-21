@@ -1144,6 +1144,14 @@
   background-image: url(../img/Team_squack.jpg);
   background-size: cover;
 }
+.Card_Squad5 {
+  width: 100%;
+  height: 100%;
+  border: 2px solid #7d19e2;
+  border-radius: 15px;
+  background-image: url(../img/logo_wld.png);
+  background-size: cover;
+}
 .Card_Squad1 .txt_squad,
 .Card_Squad4 .txt_squad {
   position: absolute;
