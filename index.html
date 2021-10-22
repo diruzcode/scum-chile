@@ -53,42 +53,34 @@
         </div>
     </section>
 
-    <!-- NUMBERS OF SERVER -->
-    <section class="Container_server">
-        <h2 class="title_server">PROMEDIO JUGADORES EL ULTIMO MES EN SCUM CHILE</h1>
-            <div class="description_server">
-                <div class="server_details">
-                    <div class="banner_server">
-                        <div>
-                            <canvas id="myChart"></canvas>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </section>
-
     <!-- SECTION INFO SERVER -->
     <section class="Container_server">
         <h2 class="title_server">COMUNIDAD SCUM CHILE</h1>
         <div class="description_server">
             <div class="server_details">
-                <p class="txt_details">
-                    <strong><i class="fas fa-hand-point-right"></i> Usuario actualmente conectados : </strong> <span id="players"></span><br>
-                    <strong><i class="fas fa-hand-point-right"></i> Ranking actual : </strong> <span id="ranking"></span> <br>
-                    <strong><i class="fas fa-hand-point-right"></i> Version : </strong> <span id="version"></span> <br>
-                    <strong><i class="fas fa-hand-point-right"></i> Hora actual en el servidor : </strong> <span id="time"></span> <br>
-                    <strong><i class="fas fa-hand-point-right"></i> Maximo de players permitidos : </strong> <span id="maxPlayers"></span> <br>
-
-                    <strong><i class="fas fa-hand-point-right"></i> </strong> Información obtenida desde <a href="https://www.battlemetrics.com/servers/scum/11449879" target="_blank">battlemetrics</a> <br>
-                    <strong><i class="fas fa-hand-point-right"></i> NO BOTS</strong> <br>
-                    <strong><i class="fas fa-hand-point-right"></i> Último Wipe : </strong> 29/07/2021 <br>
-                    <strong><i class="fas fa-hand-point-right"></i> Límine de miembros por squad : </strong> 13 players <br>
-                    <strong><i class="fas fa-hand-point-right"></i> Loot rate : </strong> x2 <br>
-                    <strong><i class="fas fa-hand-point-right"></i> Respawn de loot : </strong> 45 minutos <br>
-                    <strong><i class="fas fa-hand-point-right"></i> Velocidad del día : </strong> x4 <br>
-                    <strong><i class="fas fa-hand-point-right"></i> Velocidad del metabolismo : </strong> x4 <br>
-                    <strong><i class="fas fa-hand-point-right"></i> Reinicios programados : </strong> 01:00, 12:00, 18:00, 22:00 Hora CL - ARG <br>
-                </p>
+                <div class="banner_server">
+                    <canvas id="myChart"></canvas>
+                </div>
+                <div class="txt_details">
+                    <p class="txt_details1">
+                        <strong>Usuario actualmente conectados : </strong> <span id="players"></span><br>
+                        <strong>Ranking actual : </strong> <span id="ranking"></span> <br>
+                        <strong>Version : </strong> <span id="version"></span> <br>
+                        <strong>Hora actual en el servidor : </strong> <span id="time"></span> <br>
+                        <strong>Maximo de players permitidos : </strong> <span id="maxPlayers"></span> <br>
+                        <span class="infodetails">Información obtenida desde <a href="https://www.battlemetrics.com/servers/scum/11449879" target="_blank">battlemetrics</a></span>
+                    </p>
+                    <p class="txt_details2">
+                        <strong><i class="fas fa-hand-point-right"></i> NO BOTS</strong> <br>
+                        <strong><i class="fas fa-hand-point-right"></i> Último Wipe : </strong> 29/07/2021 <br>
+                        <strong><i class="fas fa-hand-point-right"></i> Límine de miembros por squad : </strong> 13 players <br>
+                        <strong><i class="fas fa-hand-point-right"></i> Loot rate : </strong> x2 <br>
+                        <strong><i class="fas fa-hand-point-right"></i> Respawn de loot : </strong> 45 minutos <br>
+                        <strong><i class="fas fa-hand-point-right"></i> Velocidad del día : </strong> x4 <br>
+                        <strong><i class="fas fa-hand-point-right"></i> Velocidad del metabolismo : </strong> x4 <br>
+                        <strong><i class="fas fa-hand-point-right"></i> Reinicios programados : </strong> 01:00, 12:00, 18:00, 22:00 Hora CL - ARG <br>
+                    </p>
+                </div>
             </div>
         </div>
         <div class="server_events">
@@ -209,9 +201,9 @@
         const dataChart = {
             labels: [],
             datasets: [{
-                label: 'dsdsdsdsdfsdfs',
-                backgroundColor: 'rgb(255, 99, 132)',
-                borderColor: 'rgb(255, 99, 132)',
+                label: '   ¡JUGADORES ONLINE DEL ÚLTIMO MES!',
+                backgroundColor: 'rgb(105, 255, 132)',
+                borderColor: 'rgb(5, 205, 132)',
                 data: [],
             }]
         };
@@ -280,7 +272,7 @@
 
     <!-- FOOTER -->
     <footer class="Container_footer">
-        <p>© 2021 Jhdesigner - <a href="https://github.com/DiruzCode">Diruzcode</a> All trademarks and contents belong to their respective owners.</p>
+        <p>© 2021 <a href="https://www.behance.net/jhdesigner"><strong>Jhdesigner</strong></a> & <a href="https://github.com/DiruzCode"><strong>Diruzcode</strong></a>. <br>All trademarks and contents belong to their respective owners.</p>
     </footer>
 </body>
 </html>

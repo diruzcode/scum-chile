@@ -4,6 +4,9 @@
   padding: 0;
   font-family: "Roboto", sans-serif;
 }
+a {
+  text-decoration: none;
+}
 
 /* NAV */
 .nav {
@@ -226,26 +229,58 @@
 }
 .server_details {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  padding: 50px 0 100px 0;
+  padding: 60px 0 80px 0;
+  margin: 0 120px;
 }
 .banner_server {
   display: flex;
+  width: 800px !important;
   margin-right: 50px;
-  box-shadow: 0 2px 10px #8b8b8b;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px #aaa;
+}
+.banner_server #myChart {
+  width: 100% !important;
+  height: 100%;
 }
 .txt_details {
   display: block;
-  margin-left: 60px;
   line-height: 28px;
 }
 .txt_details strong {
   color: #7d19e2;
 }
+.txt_details1 {
+  color: #fff;
+  background: linear-gradient(
+    0deg, 
+    rgba(125, 25, 226, 0.9), 
+    rgba(125, 25, 226, 0.9)
+    ), 
+    url('../img/Texture_door.jpg');
+  background-position: bottom;
+  background-size: cover;
+  border-radius: 8px;
+  padding: 14px 24px;
+}
+.txt_details1 strong {
+  color: #fff2b4;
+}
+.txt_details1 .infodetails {
+  font-style: italic;
+  font-size: 12px;
+}
+.txt_details1 a {
+  color: #ffd600;
+}
+.txt_details2 {
+  padding: 15px 24px 0;
+}
 .server_events {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   padding: 50px 0;
   background-color: #5f5f5f;
@@ -261,7 +296,7 @@
 .bg_events {
   display: inline-block;
   position: relative;
-  width: 1008px;
+  width: 1000px;
   height: 567px;
   margin-left: 120px;
   box-shadow: 0px 10px 25px #333;
@@ -442,6 +477,7 @@
     justify-content: center;
     align-items: center;
     padding-top: 50px;
+    width: 100%;
   }
   .title_server {
     color: #5f5f5f;
@@ -449,27 +485,52 @@
     font-size: 2em;
   }
   .description_server {
-    display: inline-block;
     width: 100%;
   }
   .server_details {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 50px 0 100px 0;
   }
   .banner_server {
-    display: flex;
-    margin-right: 20px;
     box-shadow: 0 2px 10px #8b8b8b;
   }
   .txt_details {
     display: block;
-    margin-left: 60px;
     line-height: 28px;
+    padding-top: 40px;
+    text-align: center;
   }
   .txt_details strong {
     color: #7d19e2;
+  }
+  .txt_details1 {
+    color: #fff;
+    background: linear-gradient(
+      0deg, 
+      rgba(125, 25, 226, 0.9), 
+      rgba(125, 25, 226, 0.9)
+      ), 
+      url('../img/Texture_door.jpg');
+    background-position: bottom;
+    background-size: cover;
+    border-radius: 8px;
+    padding: 14px 24px;
+  }
+  .txt_details1 strong {
+    color: #fff2b4;
+  }
+  .txt_details1 .infodetails {
+    font-style: italic;
+    font-size: 12px;
+  }
+  .txt_details1 a {
+    color: #ffd600;
+  }
+  .txt_details2 {
+    padding: 15px 24px 0;
   }
   .server_events {
     display: block;
@@ -796,9 +857,10 @@
     display: block;
     justify-content: center;
     align-items: center;
+    margin: 0;
   }
   .banner_server {
-    width: 200px;
+    max-width: 80%;
     margin: auto;
   }
   .txt_details {
@@ -908,8 +970,10 @@
   .txt_details {
     font-size: 14px;
     line-height: 25px;
-    text-align: center;
     margin: 0 50px;
+  }
+  .txt_details1 {
+    /* width: 60%; */
   }
   .server_details,
   .server_events,
@@ -991,7 +1055,6 @@
 
   /* FOOTER */
   .Container_footer p {
-    text-align: center;
     margin: 0 30px;
   }
 }
@@ -1290,6 +1353,7 @@ a .Card_telegram {
   color: #fff;
   font-weight: 300;
   font-size: 0.7em;
+  text-align: center;
   background-color: #5f5f5f;
   background-size: 7px 7px;
   background-image: repeating-linear-gradient(
@@ -1299,6 +1363,9 @@ a .Card_telegram {
     #5f5f5f 0,
     #5f5f5f 50%
   );
+}
+.Container_footer a {
+  color: #53ceff;
 }
 
 /* PAG REGLAS */
