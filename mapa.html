@@ -10,6 +10,8 @@
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 	<!-- FONT AWESOME -->
 	<script src="https://kit.fontawesome.com/fc2f1695bc.js" crossorigin="anonymous"></script>
+    <!-- CUSTOM JS -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Comunidad SCUM CHILE</title>
 </head>
 <body>
@@ -27,7 +29,7 @@
                 <li class="nav__li"><a href="reglas.html">REGLAS</a></li>
                 <li class="nav__li"><a href="multimedia.html">MULTIMEDIA</a></li>
                 <li class="nav__li"><a href="mapa.html">MAPA INTERACTIVO</a></li>
-                <li class="nav__li"><a href="#" class="donation">DONACIONES</a></li>
+                <li class="nav__li"><a href="#" class="donation" onclick="coming()">DONACIONES</a></li>
             </ul>
         </nav>
     </header>
@@ -42,10 +44,28 @@
 
     <!-- FOOTER -->
     <footer class="Container_footer">
-        <p>© 2021 Jhdesigner - Diruzcode. All trademarks and contents belong to their respective owners.</p>
+        <p>© 2021 <a href="https://www.behance.net/jhdesigner"><strong>Jhdesigner</strong></a> & <a href="https://github.com/DiruzCode"><strong>Diruzcode</strong></a>. <br>All trademarks and contents belong to their respective owners.</p>
     </footer>
 
     <!-- CUSTOM JS -->
-    <script src="js/main.js"></script>
+    <script>
+        // COMING SOON BUTTON
+        function  coming() {
+            Swal.fire(
+                {
+                title: '¡Espéralo!',
+                text: 'Muy pronto estará habilidato.',
+                icon: 'warning',
+                iconColor: '#ffd600',
+                confirmButtonText: 'OK!',
+                confirmButtonColor: '#7d19e2',
+                width: 400,
+                padding: '2em',
+                backdrop: 'rgba(125, 25, 226, 0.15)'
+                }
+            )
+        };
+    </script>
+
 </body>
 </html>

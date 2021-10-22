@@ -13,6 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- CUSTOM JS -->
     <script src="js/vanilla-tilt.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Comunidad SCUM CHILE</title>
 </head>
 <body>
@@ -29,7 +30,7 @@
                 <li class="nav__li"><a href="reglas.html">REGLAS</a></li>
                 <!-- <li class="nav__li"><a href="multimedia.html">MULTIMEDIA</a></li>
                 <li class="nav__li"><a href="mapa.html">MAPA INTERACTIVO</a></li> -->
-                <li class="nav__li"><a href="#" class="donation">DONACIONES</a></li>
+                <li class="nav__li"><a href="#" class="donation" onclick="coming()">DONACIONES</a></li>
             </ul>
         </nav>
     </header>
@@ -39,7 +40,7 @@
         <div class="RRSS">
 				<a href="https://discord.gg/EZsTytSb4p" target="blank" class="btn_rrss"><i class="fab fa-discord"></i></a>
 				<a href="https://store.steampowered.com/app/513710/SCUM/" target="blank" class="btn_rrss"><i class="fab fa-steam"></i></a>
-				<a href="#" class="btn_rrss"><i class="fab fa-telegram"></i></a>
+				<a href="#" class="btn_rrss" onclick="coming()"><i class="fab fa-telegram"></i></a>
         </div>
         <div class="titulo_home">
             <h1 class="title_home1">Servidor de</h1>
@@ -180,7 +181,7 @@
                         <i class="fab fa-steam"> </i><h3>COMUNIDAD STEAM</h3>
                     </div>
                 </a>
-                <a href="#" target="blank">
+                <a href="#" onclick="coming()">
                     <div class="Card_telegram">
                         <i class="fab fa-telegram"></i><h3>GRUPO TELEGRAM</h3>
                     </div>
@@ -189,14 +190,38 @@
         </div>
     </section>
 
+    <!-- CUSTOM JS -->
     <script>
+        // COMING SOON BUTTON
+        function  coming() {
+            Swal.fire(
+                {
+                title: '¡Espéralo!',
+                text: 'Muy pronto estará habilidato.',
+                icon: 'warning',
+                iconColor: '#ffd600',
+                confirmButtonText: 'OK!',
+                confirmButtonColor: '#7d19e2',
+                width: 400,
+                padding: '2em',
+                backdrop: 'rgba(125, 25, 226, 0.15)'
+                }
+            )
+        };
+
+
+        // BUTTON EFFECT
+        
         VanillaTilt.init(document.querySelectorAll(".Contain_community .community a"), {
 		max: 30,
 		speed: 400,
         glare: true,
         scale: 1,
         "max-glare": 0.6
-	    })
+	    });
+
+
+        // INFO SERVER
 
         const dataChart = {
             labels: [],
@@ -274,5 +299,6 @@
     <footer class="Container_footer">
         <p>© 2021 <a href="https://www.behance.net/jhdesigner"><strong>Jhdesigner</strong></a> & <a href="https://github.com/DiruzCode"><strong>Diruzcode</strong></a>. <br>All trademarks and contents belong to their respective owners.</p>
     </footer>
+
 </body>
 </html>
