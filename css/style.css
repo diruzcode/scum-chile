@@ -1737,6 +1737,7 @@ a .Card_telegram {
 .Pagos .sci {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
@@ -1969,4 +1970,18 @@ a .Card_telegram {
 .Pagos .contain_pago_eth .sub__txt2 span {
   color: #ffe600;
   font-weight: 400;
+}
+
+
+/* RESPONSIVE PAGOS */
+@media screen and (max-width: 430px) {
+  .Pagos .sci li a {
+    width: 80px;
+    height: 80px;
+    font-size: 2.7em;
+  }
+
+  .Pagos .contain_pago_paypal .form_pago_paypal {
+    max-width: 250px;
+  }
 }
