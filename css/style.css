@@ -134,7 +134,7 @@ a {
   align-items: center;
   width: 50px;
 }
-.btn_rrss i {
+.RRSS .btn_rrss i {
   padding: 20px 20px;
   font-size: 1.6em;
   width: 100%;
@@ -142,9 +142,8 @@ a {
   color: #5f5f5f;
   text-decoration: none;
 }
-.btn_rrss:hover i {
+.RRSS .btn_rrss:hover i {
   color: #7d19e2;
-  transform: scale(1.5) translateZ(50px);
 }
 .titulo_home {
   display: flex;
@@ -1339,7 +1338,7 @@ a .Card_telegram {
   padding: 50px 0;
   color: #fff;
   font-weight: 300;
-  font-size: 0.7em;
+  font-size: 0.8em;
   text-align: center;
   background-color: #5f5f5f;
   background-size: 7px 7px;
@@ -1668,4 +1667,306 @@ a .Card_telegram {
   height: 100%;
   margin: 0 120px;
   background: #8b8b8b;
+}
+
+
+/* PAG DONACIONES */
+.BG_Dona {
+  background: 
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.8) 2%,
+      rgba(255, 255, 255, 0.8) 20%
+    ),
+    url(../img/BG2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.Section_dona {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  padding: 160px 0 50px;
+  width: 100%;
+}
+.title_dona {
+  text-align: center;
+  font-size: 2.5em;
+  color: #5f5f5f;
+}
+.title_dona::after {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 16px;
+  margin-top: 29px;
+  right: 43%;
+  background-color: #ffc700;
+  mix-blend-mode: multiply;
+}
+.Pagos {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  min-height: 600px;
+  text-align: center;
+  transition: 0.5s;
+  background: rgba(125, 25, 226, 0.8);
+  max-width: 1050px;
+  border-radius: 15px;
+  margin: 0 auto 50px;
+  padding: 8px;
+}
+.Pagos .p_contenido {
+  margin: 40px 10%;
+  color: #fff;
+  line-height: 25px;
+}
+.Pagos .p_contenido a {
+  font-weight: bold;
+  color: #ffc700;
+}
+.Pagos h2 {
+  color: #ffe600;
+}
+.Pagos .p_contenido2 {
+  color: #fff;
+  padding-top: 20px;
+  line-height: 25px;
+}
+.Pagos .sci {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Pagos .sci li {
+  list-style: none;
+  margin: 40px;
+}
+.Pagos .sci li::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,calc(-50% + 120px));
+  font-size: 6vw;
+  color: #fff;
+  pointer-events: none;
+  font-weight: 700;
+  transition: 0.5s;
+  opacity: 0;
+}
+.Pagos .sci li:hover::before {
+  opacity: 0.1;
+  transform: translate(-50%,calc(-50% + 150px));
+}
+.Pagos .sci li a {
+  position: relative;
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-radius: 15px;
+  font-size: 4em;
+  transform-style: preserve-3d;
+  perspective: 500px;
+  transition: background 0.25s;
+}
+.Pagos .sci li a:hover.paypal {
+  background: #0070ba;
+  border: none;
+}
+.Pagos .sci li a:hover.banco {
+  background: #0cd405;
+  border: none;
+}
+.Pagos .sci li a:hover.btc {
+  background: #f6931a;
+  border: none;
+}
+.Pagos .sci li a:hover.eth {
+  background: #627feb;
+  border: none;
+}
+.Pagos .sci li a i {
+  transition: 0.25s;
+  pointer-events: none;
+}
+.Pagos .sci li a:hover i {
+  transform: scale(1.5) translateZ(30px);
+}
+/* PAGO PAYPAL */
+.Pagos .contain_pago_paypal {
+  padding-top: 140px;
+  margin: 0 13% 60px;
+  color: #fff;
+}
+.Pagos .contain_pago_paypal p {
+  margin-top: 20px;
+  line-height: 22px;
+}
+.Pagos .contain_pago_paypal .sub__txt {
+  font-style: italic;
+  font-size: 14px;
+}
+.Pagos .contain_pago_paypal .pagos_security {
+  margin: 20px 0;
+  padding: 8px 15px;
+  border-radius: 5px;
+  color: #5f5f5f;
+  background: #ffd600;
+}
+.Pagos .contain_pago_paypal .form_pago_paypal {
+  width: 300px;
+  height: 30px;
+  margin: 40px auto;
+  position: relative;
+  overflow: hidden;
+}
+.Pagos .contain_pago_paypal .form_pago_paypal input {
+  width: 100%;
+  height: 100%;
+  background: none;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  border: none;
+  outline: 0px;
+}
+.Pagos .contain_pago_paypal .form_pago_paypal .label_pago_paypal {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid #fff;
+}
+.Pagos .contain_pago_paypal .form_pago_paypal .label_pago_paypal::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 100%;
+  border-bottom: 3px solid #ffd600;
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+}
+.Pagos .contain_pago_paypal .form_pago_paypal .label_pago_paypal .txt_pago_paypal {
+  position: absolute;
+  justify-content: center;
+  bottom: 5px;
+  left: 0;
+  transition: all 0.3s ease;
+  color: rgba(255, 255, 255, 0.3);
+}
+.Pagos .contain_pago_paypal .form_pago_paypal input:focus + .label_pago_paypal .txt_pago_paypal,
+.Pagos .contain_pago_paypal .form_pago_paypal input:valid + .label_pago_paypal .txt_pago_paypal {
+  color: rgba(255, 255, 255, 0);
+}
+.Pagos .contain_pago_paypal .form_pago_paypal input:focus + .label_pago_paypal::after,
+.Pagos .contain_pago_paypal .form_pago_paypal input:valid + .label_pago_paypal::after {
+  transform: translateX(0%);
+}
+.Pagos .contain_pago_paypal .btn_paypal {
+  margin: auto;
+  width: 220px;
+  padding: 20px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+.Pagos .contain_pago_paypal .btn_paypal a {
+  color: #fff;
+  font-style: italic;
+}
+.Pagos .contain_pago_paypal .btn_paypal a i {
+  margin-right: 10px;
+}
+.Pagos .contain_pago_paypal .btn_paypal:hover {
+  background: #fff;
+}
+.Pagos .contain_pago_paypal .btn_paypal:hover a {
+  color: #5f5f5f;
+  font-weight: 700;
+}
+/* PAGO BANCO */
+.Pagos .contain_pago_banco {
+  padding-top: 140px;
+  margin: 0 13% 60px;
+  color: #fff;
+}
+.Pagos .contain_pago_banco p {
+  margin-top: 20px;
+  line-height: 22px;
+}
+.Pagos .contain_pago_banco .sub__txt {
+  font-style: italic;
+  font-size: 14px;
+}
+.Pagos .contain_pago_banco .sub__txt2 a {
+  color: #68e8ff;
+}
+.Pagos .contain_pago_banco .sub__txt2 span,
+.Pagos .contain_pago_banco .sub__txt3 span {
+  color: #ffe600;
+  font-weight: 400;
+}
+.Pagos .contain_pago_banco .pagos_security {
+  margin: 20px 0;
+  padding: 8px 15px;
+  border-radius: 5px;
+  color: #5f5f5f;
+  background: #ffd600;
+}
+.Pagos .contain_pago_banco .sub__txt3 {
+  font-weight: 300;
+  padding: 20px;
+  border: 1px solid #fff;
+}
+.Pagos .contain_pago_banco .pagos_security {
+  margin-top: 30px;
+}
+/* PAGO BITCOIN */
+.Pagos .contain_pago_btc {
+  padding-top: 140px;
+  margin: 0 13% 60px;
+  color: #fff;
+}
+.Pagos .contain_pago_btc p {
+  margin-top: 20px;
+  line-height: 22px;
+}
+.Pagos .contain_pago_btc .sub__txt {
+  font-style: italic;
+  font-size: 14px;
+}
+.Pagos .contain_pago_btc .sub__txt2 span {
+  color: #ffe600;
+  font-weight: 400;
+}
+/* PAGO ETHEREUM */
+.Pagos .contain_pago_eth {
+  padding-top: 140px;
+  margin: 0 13% 60px;
+  color: #fff;
+}
+.Pagos .contain_pago_eth p {
+  margin-top: 20px;
+  line-height: 22px;
+}
+.Pagos .contain_pago_eth .sub__txt {
+  font-style: italic;
+  font-size: 14px;
+}
+.Pagos .contain_pago_eth .sub__txt2 span {
+  color: #ffe600;
+  font-weight: 400;
 }

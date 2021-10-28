@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Comunidad SCUM CHILE</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- GOOGLE FONT ROBOTO -->
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+	<!-- FONT AWESOME -->
+	<script src="https://kit.fontawesome.com/fc2f1695bc.js" crossorigin="anonymous"></script>
+    <!-- CUSTOM JS -->
+    <script src="js/vanilla-tilt.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body class="BG_Dona">
+    <header>
+        <nav class="nav">
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <a href="/" class="nav__logo">
+                <img src="img/logo.png" alt="SCUM CHILE">
+            </a>
+            <ul class="nav__ul">
+                <li class="nav__li"><a href="/">INICIO</a></li>
+                <li class="nav__li"><a href="reglas.html">REGLAS</a></li>
+                <!-- <li class="nav__li"><a href="multimedia.html">MULTIMEDIA</a></li>
+                <li class="nav__li"><a href="mapa.html">MAPA INTERACTIVO</a></li> -->
+                <li class="nav__li"><a href="donaciones.html" class="donation">DONACIONES</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- SECTION MULTIMEDIA -->
+    <section class="Section_dona">
+        <h1 class="title_dona">WHITE LIST</h1>
+    </section>
+
+    <section class="Pagos">
+        <p class="p_contenido">
+            Adquiriendo la <strong>White List</strong> ayudas al servidor a mantenerse en línea, esta lista te permite ingresar de forma inmediata cuando el servidor se encuentre lleno, además de tener un descuento del 40% en la compra de cualquier item del mercado (puedes revisar la lista de precios ingresando <a href="https://docs.google.com/spreadsheets/d/1DOaUzT-nQ9DOG3zjUcl6P8lT9rJxQBQpGEW9PwZIaJY/edit#gid=0" target="blank">AQUÍ</a>).
+        </p>
+        <h2>¿Estás listo/a?</h2>
+        <p class="p_contenido2">
+            ¡Comencemos! <br> Selecciona el método de pago:
+        </p>
+        <ul class="sci">
+            <li data-text="PAYPAL">
+                <a href="" class="paypal"><i class="fab fa-paypal"></i></a>
+            </li>
+            <li data-text="TRANSFERENCIA">
+                <a href="" class="banco"><i class="fas fa-money-check-alt"></i></a>
+            </li>
+            <li data-text="BITCOIN">
+                <a href="" class="btc"><i class="fab fa-bitcoin"></i></a>
+            </li>
+            <li data-text="ETHEREUM">
+                <a href="" class="eth"><i class="fab fa-ethereum"></i></a>
+            </li>
+        </ul>
+        <!-- PAYPAL -->
+        <div class="contain_pago_paypal">
+            <h4>Pasos para adquirir la <strong>WHITE LIST</strong> - $2.5 USD por cupo.</h4>
+            <p class="sub__txt">
+                Podrás enviar un pago con tarjeta de Credito/Debito desde cualquier parte del mundo aún sin tener cuenta de PayPal.
+            </p>
+            <p>
+                Solo introduce el NICK del personaje que deseas incorporar a la White List y continua el proceso de pago en la página segura de PayPal. La adición a la lista se realizará una vez haya terminado el proceso.
+            </p>
+            <p class="pagos_security">
+                Por su seguridad, una vez terminado el proceso informe por DISCORD a cualquiera de los admin a cargo: <strong>HEISENBERG, Diruzcode o Brian Agustin.</strong>
+            </p>
+            <form class="form_pago_paypal">
+                <input type="text" required>
+                <label class="label_pago_paypal">
+                    <span class="txt_pago_paypal">
+                        Escribe el NICK del personaje
+                    </span>
+                </label>
+            </form>
+            <div class="btn_paypal">
+                <a href=""><i class="fab fa-paypal"></i>Donar con Paypal</a>
+            </div>
+        </div>
+        <!-- BANCO -->
+        <div class="contain_pago_banco">
+            <h4>Pasos para adquirir la <strong>WHITE LIST</strong> - $2.5 USD por cupo.</h4>
+            <p class="sub__txt">
+                Método exclusivo para Chile, se puede realizar desde cualquier caja vecina u otro establecimiento que acepte deposito a cuenta RUT.
+            </p>
+            <p class="sub__txt2">
+                1.- Dirígete al establecimiento y realiza un deposito de la cantidad de pesos equivalentes a $2.5 dolares <a href="https://wise.com/es/currency-converter/usd-to-clp-rate?amount=2.5">(ver cantidad convertida a pesos chilenos)</a> a la cuenta RUT: [ <span>18.225.783-4</span> ] a nombre de [ <span>Ricardo Castillo</span> ]. <br><br>
+
+                2.- Tómale una foto al voucher o ticket de pago y envíalo al correo: [ <span>ricardo_elputo@correo.com</span> ] y escríbenos el ID del personaje que ingresará a la White List..
+            </p>
+            <p class="sub__txt3">
+                También se aceptan transferencias bancarias, solamente en el formulario coloca nuestro correo: <span>ricardo_elputo@correo.com</span> para que nos llegue la notificación directamente del banco y en los comentarios escribir el nombre del personaje que entrará a la lista.
+            </p>
+            <p class="pagos_security">
+                Por su seguridad, una vez terminado el proceso informe por DISCORD a cualquiera de los admin a cargo: <strong>HEISENBERG, Diruzcode o Brian Agustin.</strong>
+            </p>
+        </div>
+        <!-- BITCOIN -->
+        <div class="contain_pago_btc">
+            <h4>Pasos para adquirir la <strong>WHITE LIST</strong> - $2.5 USD por cupo.</h4>
+            <p class="sub__txt">
+                Si cuentas con la cryptomoneda <strong>BITCOIN</strong> puedes realizar la transferencia desde cualquier parte del mundo.
+            </p>
+            <p class="sub__txt2">
+                Copia el siguiente código y pégalo en la transferencia desde tu wallet: <br> [ <span>3E8xxENLACEx215xBITCOINxx3Dd</span> ]
+            </p>
+        </div>
+        <!-- ETHEREUM -->
+        <div class="contain_pago_eth">
+            <h4>Pasos para adquirir la <strong>WHITE LIST</strong> - $2.5 USD por cupo.</h4>
+            <p class="sub__txt">
+                Si cuentas con la cryptomoneda <strong>ETHEREUM</strong> puedes realizar la transferencia desde cualquier parte del mundo.
+            </p>
+            <p class="sub__txt2">
+                Copia el siguiente código y pégalo en la transferencia desde tu wallet: <br> [ <span>3E8xxENLACEx215xETHEREUMxx3Dd</span> ]
+            </p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="Container_footer">
+        <p>© 2021 <a href="https://www.behance.net/jhdesigner"><strong>Jhdesigner</strong></a> & <a href="https://github.com/DiruzCode"><strong>Diruzcode</strong></a>. <br>All trademarks and contents belong to their respective owners.</p>
+    </footer>
+
+    <!-- CUSTOM JS -->
+    <script>
+        // BUTTON EFFECT
+        
+        VanillaTilt.init(document.querySelectorAll(".Pagos .sci li a"), {
+		max: 30,
+		speed: 400,
+        scale: 1.1,
+        glare: true,
+        "max-glare": 0.8
+	    });
+    </script>
+
+</body>
+</html>
