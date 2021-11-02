@@ -13,7 +13,6 @@
 	<script src="https://kit.fontawesome.com/fc2f1695bc.js" crossorigin="anonymous"></script>
     <!-- CUSTOM JS -->
     <script src="js/vanilla-tilt.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body class="BG_Dona">
@@ -89,9 +88,9 @@
             </p>
             <p class="sub__txt2">
                 1.- Banco : BCI <br><br>
-                2.- Numero de cuenta : 61171182 <br><br>
+                2.- Número de cuenta : 61171182 <br><br>
                 3.- Correo : infojobrc@gmail.com <br><br>
-                4.- Rut : 17.611.240-9 <br><br>
+                4.- RUT : 17.611.240-9 <br><br>
                 5.- Nombre : Ricardo Castillo <br><br>
             </p>
             <p class="pagos_security">
@@ -107,23 +106,24 @@
             <p class="sub__txt2">
                 Copia el siguiente código y pégalo en la transferencia desde tu wallet: <br> [ <span>14KRr1wkeMWFqWyw9u2BCajt5WAy43sjPy</span> ]
             </p>
-
             <p class="pagos_security"> Por su seguridad, una vez terminado el proceso informe por DISCORD a cualquiera de los admin
                 a cargo: <strong>HEISENBERG, Diruzcode o Brian Agustin.</strong>
             </p>
         </div>
         <!-- ETHEREUM -->
         <div id="contain_pago_eth" class="contain_pago_eth hide">
-            <h4>Pasos para adquirir la <strong>WHITE LIST</strong> - $2.5 USD por cupo.</h4>
-            <p class="sub__txt">
-                Si cuentas con la cryptomoneda <strong>ETHEREUM</strong> puedes realizar la transferencia desde cualquier parte del mundo.
-            </p>
-            <p class="sub__txt2">
-                Copia el siguiente código y pégalo en la transferencia desde tu wallet: <br> [ <span>0x4a52ca13a1349b1391f51c915191a50c6f3c2a19</span> ]
-            </p>
-            <p class="pagos_security"> Por su seguridad, una vez terminado el proceso informe por DISCORD a cualquiera de los admin
-                a cargo: <strong>HEISENBERG, Diruzcode o Brian Agustin.</strong>
-            </p>
+            <div class="prueba" id="prueba">
+                <h4>Pasos para adquirir la <strong>WHITE LIST</strong> - $2.5 USD por cupo.</h4>
+                <p class="sub__txt">
+                    Si cuentas con la cryptomoneda <strong>ETHEREUM</strong> puedes realizar la transferencia desde cualquier parte del mundo.
+                </p>
+                <p class="sub__txt2">
+                    Copia el siguiente código y pégalo en la transferencia desde tu wallet: <br> [ <span>0x4a52ca13a1349b1391f51c915191a50c6f3c2a19</span> ]
+                </p>
+                <p class="pagos_security"> Por su seguridad, una vez terminado el proceso informe por DISCORD a cualquiera de los admin
+                    a cargo: <strong>HEISENBERG, Diruzcode o Brian Agustin.</strong>
+                </p>
+            </div>
         </div>
     </section>
 
@@ -134,14 +134,16 @@
 
     <!-- CUSTOM JS -->
     <script>
-
+        //JS INTERACTION INFO
         function displayInformation(id){
             console.log(id)
             $('#contain_pago_paypal').addClass("hide");
             $('#contain_pago_banco').addClass("hide");
             $('#contain_pago_btc').addClass("hide");
             $('#contain_pago_eth').addClass("hide");
+            $('#prueba').fadeOut();
             $(`#${id}`).removeClass("hide");
+            $('#prueba').fadeIn("slow");
         };
 
         $(document).ready(function () {
@@ -159,7 +161,9 @@
             })
         });
 
-        VanillaTilt.init(document.querySelectorAll(".RRSS a, .Contain_community .community a, .Content_Squads .Box"), {
+
+        //BUTTON 3D EFFECT
+        VanillaTilt.init(document.querySelectorAll(".Pagos .sci li a"), {
             max: 30,
             speed: 400,
             glare: true,
