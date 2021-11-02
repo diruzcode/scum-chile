@@ -14,6 +14,7 @@
     <!-- CUSTOM JS -->
     <script src="js/vanilla-tilt.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body class="BG_Dona">
     <header>
@@ -37,12 +38,17 @@
 
     <!-- SECTION MULTIMEDIA -->
     <section class="Section_dona">
-        <h1 class="title_dona">WHITE LIST</h1>
+        <h1 class="title_dona">DONACIONES</h1>
     </section>
 
     <section class="Pagos">
         <p class="p_contenido">
-            Adquiriendo la <strong>White List</strong> ayudas al servidor a mantenerse en línea, esta lista te permite ingresar de forma inmediata cuando el servidor se encuentre lleno, además de tener un descuento del 40% en la compra de cualquier item del mercado (puedes revisar la lista de precios ingresando <a href="https://docs.google.com/spreadsheets/d/1DOaUzT-nQ9DOG3zjUcl6P8lT9rJxQBQpGEW9PwZIaJY/edit#gid=0" target="blank">AQUÍ</a>).
+            Realizando una <strong>Donación</strong> ayudas al servidor a mantenerse en línea, junto con la donación hay una lista de regalias en el servidor entre ellas.
+            <ul>
+                <li><strong>White List</strong>: te permite ingresar de forma inmediata cuando el servidor se encuentre lleno</li>
+                <li><strong>Descuento en el mercado</strong>: 40% en la compra de cualquier item del mercado (puedes revisar la lista de precios ingresando <a href="https://docs.google.com/spreadsheets/d/1DOaUzT-nQ9DOG3zjUcl6P8lT9rJxQBQpGEW9PwZIaJY/edit#gid=0"
+                    target="blank">AQUÍ</a></li>
+            </ul>
         </p>
         <h2>¿Estás listo/a?</h2>
         <p class="p_contenido2">
@@ -50,78 +56,73 @@
         </p>
         <ul class="sci">
             <li data-text="PAYPAL">
-                <a href="" class="paypal"><i class="fab fa-paypal"></i></a>
+                <a href="javascript:void(0);" class="paypal" id="paypal"><i class="fab fa-paypal"></i></a>
             </li>
             <li data-text="TRANSFERENCIA">
-                <a href="" class="banco"><i class="fas fa-money-check-alt"></i></a>
+                <a href="javascript:void(0);" class="banco" id="banco"><i class="fas fa-money-check-alt"></i></a>
             </li>
             <li data-text="BITCOIN">
-                <a href="" class="btc"><i class="fab fa-bitcoin"></i></a>
+                <a href="javascript:void(0);" class="btc" id="btc"><i class="fab fa-bitcoin"></i></a>
             </li>
             <li data-text="ETHEREUM">
-                <a href="" class="eth"><i class="fab fa-ethereum"></i></a>
+                <a href="javascript:void(0);" class="eth" id="eth"><i class="fab fa-ethereum"></i></a>
             </li>
         </ul>
         <!-- PAYPAL -->
-        <div class="contain_pago_paypal">
+        <div id="contain_pago_paypal" class="contain_pago_paypal hide">
             <h4>Pasos para adquirir la <strong>WHITE LIST</strong> - $2.5 USD por cupo.</h4>
             <p class="sub__txt">
                 Podrás enviar un pago con tarjeta de Credito/Debito desde cualquier parte del mundo aún sin tener cuenta de PayPal.
             </p>
-            <p>
-                Solo introduce el NICK del personaje que deseas incorporar a la White List y continua el proceso de pago en la página segura de PayPal. La adición a la lista se realizará una vez haya terminado el proceso.
-            </p>
             <p class="pagos_security">
                 Por su seguridad, una vez terminado el proceso informe por DISCORD a cualquiera de los admin a cargo: <strong>HEISENBERG, Diruzcode o Brian Agustin.</strong>
             </p>
-            <form class="form_pago_paypal">
-                <input type="text" required>
-                <label class="label_pago_paypal">
-                    <span class="txt_pago_paypal">
-                        Escribe el NICK del personaje
-                    </span>
-                </label>
-            </form>
             <div class="btn_paypal">
-                <a href=""><i class="fab fa-paypal"></i>Donar con Paypal</a>
+                <a href="https://www.paypal.com/donate?hosted_button_id=C39Z59URMJP9S" target="_blank"><i class="fab fa-paypal"></i>Donar con Paypal</a>
             </div>
         </div>
         <!-- BANCO -->
-        <div class="contain_pago_banco">
+        <div id="contain_pago_banco" class="contain_pago_banco hide">
             <h4>Pasos para adquirir la <strong>WHITE LIST</strong> - $2.5 USD por cupo.</h4>
             <p class="sub__txt">
-                Método exclusivo para Chile, se puede realizar desde cualquier caja vecina u otro establecimiento que acepte deposito a cuenta RUT.
+                Método exclusivo para Chile, se puede realizar desde cualquier banco.
             </p>
             <p class="sub__txt2">
-                1.- Dirígete al establecimiento y realiza un deposito de la cantidad de pesos equivalentes a $2.5 dolares <a href="https://wise.com/es/currency-converter/usd-to-clp-rate?amount=2.5">(ver cantidad convertida a pesos chilenos)</a> a la cuenta RUT: [ <span>18.225.783-4</span> ] a nombre de [ <span>Ricardo Castillo</span> ]. <br><br>
-
-                2.- Tómale una foto al voucher o ticket de pago y envíalo al correo: [ <span>ricardo_elputo@correo.com</span> ] y escríbenos el ID del personaje que ingresará a la White List..
-            </p>
-            <p class="sub__txt3">
-                También se aceptan transferencias bancarias, solamente en el formulario coloca nuestro correo: <span>ricardo_elputo@correo.com</span> para que nos llegue la notificación directamente del banco y en los comentarios escribir el nombre del personaje que entrará a la lista.
+                1.- Banco : BCI <br><br>
+                2.- Numero de cuenta : 61171182 <br><br>
+                3.- Correo : infojobrc@gmail.com <br><br>
+                4.- Rut : 17.611.240-9 <br><br>
+                5.- Nombre : Ricardo Castillo <br><br>
             </p>
             <p class="pagos_security">
                 Por su seguridad, una vez terminado el proceso informe por DISCORD a cualquiera de los admin a cargo: <strong>HEISENBERG, Diruzcode o Brian Agustin.</strong>
             </p>
         </div>
         <!-- BITCOIN -->
-        <div class="contain_pago_btc">
+        <div id="contain_pago_btc" class="contain_pago_btc hide">
             <h4>Pasos para adquirir la <strong>WHITE LIST</strong> - $2.5 USD por cupo.</h4>
             <p class="sub__txt">
                 Si cuentas con la cryptomoneda <strong>BITCOIN</strong> puedes realizar la transferencia desde cualquier parte del mundo.
             </p>
             <p class="sub__txt2">
-                Copia el siguiente código y pégalo en la transferencia desde tu wallet: <br> [ <span>3E8xxENLACEx215xBITCOINxx3Dd</span> ]
+                Copia el siguiente código y pégalo en la transferencia desde tu wallet: <br> [ <span>14KRr1wkeMWFqWyw9u2BCajt5WAy43sjPy</span> ]
+            </p>
+
+            <p class="pagos_security"> Por su seguridad, una vez terminado el proceso informe por DISCORD a cualquiera de los admin
+                a cargo: <strong>HEISENBERG, Diruzcode o Brian Agustin.</strong>
             </p>
         </div>
         <!-- ETHEREUM -->
-        <div class="contain_pago_eth">
+        <div id="contain_pago_eth" class="contain_pago_eth hide">
             <h4>Pasos para adquirir la <strong>WHITE LIST</strong> - $2.5 USD por cupo.</h4>
             <p class="sub__txt">
                 Si cuentas con la cryptomoneda <strong>ETHEREUM</strong> puedes realizar la transferencia desde cualquier parte del mundo.
             </p>
             <p class="sub__txt2">
-                Copia el siguiente código y pégalo en la transferencia desde tu wallet: <br> [ <span>3E8xxENLACEx215xETHEREUMxx3Dd</span> ]
+                Copia el siguiente código y pégalo en la transferencia desde tu wallet: <br> [ <span>0x4a52ca13a1349b1391f51c915191a50c6f3c2a19</span> ]
+            </p>
+            <p class="pagos_security"> Por su seguridad, una vez terminado el proceso informe por DISCORD a cualquiera de los admin
+                a cargo: <strong>HEISENBERG, Diruzcode o Brian Agustin.</strong>
             </p>
         </div>
     </section>
@@ -133,16 +134,39 @@
 
     <!-- CUSTOM JS -->
     <script>
-        // BUTTON EFFECT
-        
-        VanillaTilt.init(document.querySelectorAll(".Pagos .sci li a"), {
-		max: 30,
-		speed: 400,
-        scale: 1.1,
-        glare: true,
-        "max-glare": 0.8
-	    });
-    </script>
 
+        function displayInformation(id){
+            console.log(id)
+            $('#contain_pago_paypal').addClass("hide");
+            $('#contain_pago_banco').addClass("hide");
+            $('#contain_pago_btc').addClass("hide");
+            $('#contain_pago_eth').addClass("hide");
+            $(`#${id}`).removeClass("hide");
+        };
+
+        $(document).ready(function () {
+            $('#paypal').click(function (){
+                displayInformation('contain_pago_paypal')
+            })
+            $('#banco').click(function () {
+                displayInformation('contain_pago_banco')
+            })
+            $('#btc').click(function () {
+                displayInformation('contain_pago_btc')
+            })
+            $('#eth').click(function () {
+                displayInformation('contain_pago_eth')
+            })
+        });
+
+        VanillaTilt.init(document.querySelectorAll(".RRSS a, .Contain_community .community a, .Content_Squads .Box"), {
+            max: 30,
+            speed: 400,
+            glare: true,
+            scale: 1,
+            "max-glare": 0.6
+        });
+
+    </script>
 </body>
 </html>

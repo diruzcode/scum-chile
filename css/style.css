@@ -254,11 +254,11 @@ a {
 .txt_details1 {
   color: #fff;
   background: linear-gradient(
-    0deg, 
-    rgba(125, 25, 226, 0.9), 
-    rgba(125, 25, 226, 0.9)
-    ), 
-    url('../img/Texture_door.jpg');
+      0deg,
+      rgba(125, 25, 226, 0.9),
+      rgba(125, 25, 226, 0.9)
+    ),
+    url("../img/Texture_door.jpg");
   background-position: bottom;
   background-size: cover;
   border-radius: 8px;
@@ -507,11 +507,11 @@ a {
   .txt_details1 {
     color: #fff;
     background: linear-gradient(
-      0deg, 
-      rgba(125, 25, 226, 0.9), 
-      rgba(125, 25, 226, 0.9)
-      ), 
-      url('../img/Texture_door.jpg');
+        0deg,
+        rgba(125, 25, 226, 0.9),
+        rgba(125, 25, 226, 0.9)
+      ),
+      url("../img/Texture_door.jpg");
     background-position: bottom;
     background-size: cover;
     border-radius: 8px;
@@ -1669,11 +1669,9 @@ a .Card_telegram {
   background: #8b8b8b;
 }
 
-
 /* PAG DONACIONES */
 .BG_Dona {
-  background: 
-    linear-gradient(
+  background: linear-gradient(
       180deg,
       rgba(255, 255, 255, 0.8) 2%,
       rgba(255, 255, 255, 0.8) 20%
@@ -1750,7 +1748,7 @@ a .Card_telegram {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,calc(-50% + 120px));
+  transform: translate(-50%, calc(-50% + 120px));
   font-size: 6vw;
   color: #fff;
   pointer-events: none;
@@ -1760,7 +1758,7 @@ a .Card_telegram {
 }
 .Pagos .sci li:hover::before {
   opacity: 0.1;
-  transform: translate(-50%,calc(-50% + 150px));
+  transform: translate(-50%, calc(-50% + 150px));
 }
 .Pagos .sci li a {
   position: relative;
@@ -1768,7 +1766,7 @@ a .Card_telegram {
   width: 120px;
   height: 120px;
   border: 2px solid rgba(255, 255, 255, 0.8);
-  background: rgba(255, 255, 255, 0.0);
+  background: rgba(255, 255, 255, 0);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1850,7 +1848,7 @@ a .Card_telegram {
   border-bottom: 1px solid #fff;
 }
 .Pagos .contain_pago_paypal .form_pago_paypal .label_pago_paypal::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: -1px;
@@ -1860,7 +1858,11 @@ a .Card_telegram {
   transform: translateX(-100%);
   transition: all 0.3s ease;
 }
-.Pagos .contain_pago_paypal .form_pago_paypal .label_pago_paypal .txt_pago_paypal {
+.Pagos
+  .contain_pago_paypal
+  .form_pago_paypal
+  .label_pago_paypal
+  .txt_pago_paypal {
   position: absolute;
   justify-content: center;
   bottom: 5px;
@@ -1868,12 +1870,30 @@ a .Card_telegram {
   transition: all 0.3s ease;
   color: rgba(255, 255, 255, 0.3);
 }
-.Pagos .contain_pago_paypal .form_pago_paypal input:focus + .label_pago_paypal .txt_pago_paypal,
-.Pagos .contain_pago_paypal .form_pago_paypal input:valid + .label_pago_paypal .txt_pago_paypal {
+.Pagos
+  .contain_pago_paypal
+  .form_pago_paypal
+  input:focus
+  + .label_pago_paypal
+  .txt_pago_paypal,
+.Pagos
+  .contain_pago_paypal
+  .form_pago_paypal
+  input:valid
+  + .label_pago_paypal
+  .txt_pago_paypal {
   color: rgba(255, 255, 255, 0);
 }
-.Pagos .contain_pago_paypal .form_pago_paypal input:focus + .label_pago_paypal::after,
-.Pagos .contain_pago_paypal .form_pago_paypal input:valid + .label_pago_paypal::after {
+.Pagos
+  .contain_pago_paypal
+  .form_pago_paypal
+  input:focus
+  + .label_pago_paypal::after,
+.Pagos
+  .contain_pago_paypal
+  .form_pago_paypal
+  input:valid
+  + .label_pago_paypal::after {
   transform: translateX(0%);
 }
 .Pagos .contain_pago_paypal .btn_paypal {
@@ -1972,6 +1992,9 @@ a .Card_telegram {
   font-weight: 400;
 }
 
+.hide {
+  display: none;
+}
 
 /* RESPONSIVE PAGOS */
 @media screen and (max-width: 430px) {
