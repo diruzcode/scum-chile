@@ -2018,16 +2018,28 @@ a .Card_telegram {
 
 /* RESPONSIVE PAGOS */
 @media screen and (max-width: 430px) {
+  .Pagos .sci {
+    width: 100%;
+    margin: 30px auto 0;
+  }
+  .Pagos .sci li {
+    margin: 10px;
+  }
   .Pagos .sci li a {
-    width: 80px;
-    height: 80px;
-    font-size: 2.7em;
+    width: 60px;
+    height: 60px;
+    font-size: 2em;
+    transform-style: none;
+    perspective: 0;
   }
   .Pagos p {
     font-size: 14px;
   }
   .Pagos .sci li:hover::before {
     opacity: 0;
+  }
+  .Pagos .sci li a:hover i {
+    transform: scale(1.2);
   }
   .Pagos .contain_pago_paypal .form_pago_paypal {
     max-width: 250px;
