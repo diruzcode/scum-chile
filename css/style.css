@@ -1808,7 +1808,7 @@ a .Card_telegram {
 }
 /* PAGO PAYPAL */
 .Pagos .contain_pago_paypal {
-  padding-top: 140px;
+  padding-top: 100px;
   margin: 0 13% 60px;
   color: #fff;
 }
@@ -1926,7 +1926,7 @@ a .Card_telegram {
 }
 /* PAGO BANCO */
 .Pagos .contain_pago_banco {
-  padding-top: 140px;
+  padding-top: 100px;
   margin: 0 13% 60px;
   color: #fff;
 }
@@ -1961,7 +1961,7 @@ a .Card_telegram {
 }
 /* PAGO BITCOIN */
 .Pagos .contain_pago_btc {
-  padding-top: 140px;
+  padding-top: 100px;
   margin: 0 13% 60px;
   color: #fff;
 }
@@ -1987,7 +1987,7 @@ a .Card_telegram {
 }
 /* PAGO ETHEREUM */
 .Pagos .contain_pago_eth {
-  padding-top: 140px;
+  padding-top: 100px;
   margin: 0 13% 60px;
   color: #fff;
 }
