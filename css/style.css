@@ -2000,6 +2000,7 @@ a .Card_telegram {
   font-size: 14px;
 }
 .Pagos .contain_pago_eth .sub__txt2 span {
+  word-wrap: break-word;
   color: #ffe600;
   font-weight: 400;
 }
