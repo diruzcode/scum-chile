@@ -692,7 +692,7 @@ a {
     height: 100%;
     border: 2px solid #7d19e2;
     border-radius: 15px;
-    background-image: url(../img/Team_vVv.jpg);
+    background-image: url(../img/Team_vVv.jpeg);
     background-size: cover;
   }
   .Card_Squad3 {
@@ -700,7 +700,7 @@ a {
     height: 100%;
     border: 2px solid #7d19e2;
     border-radius: 15px;
-    background-image: url(../img/Team_wild.jpg);
+    background-image: url(../img/Team_wild.jpeg);
     background-size: cover;
   }
   .Card_Squad4 {
@@ -1174,7 +1174,7 @@ a {
   height: 100%;
   border: 2px solid #7d19e2;
   border-radius: 15px;
-  background-image: url(../img/Team_vVv.jpg);
+  background-image: url(../img/Team_vVv.jpeg);
   background-size: cover;
 }
 .Card_Squad3 {
@@ -1182,7 +1182,7 @@ a {
   height: 100%;
   border: 2px solid #7d19e2;
   border-radius: 15px;
-  background-image: url(../img/Team_wild.jpg);
+  background-image: url(../img/Team_wild.jpeg);
   background-size: cover;
 }
 .Card_Squad4 {
