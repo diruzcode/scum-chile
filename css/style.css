@@ -720,6 +720,7 @@ a {
     background-size: cover;
   }
   .Card_Squad1 .txt_squad,
+  .Card_Squad2 .txt_squad,
   .Card_Squad4 .txt_squad {
     position: absolute;
     bottom: 0;
@@ -735,7 +736,6 @@ a {
     border-radius: 0 0 15px 15px;
     background-color: rgba(50, 50, 50, 0.4);
   }
-  .Card_Squad2 .txt_squad,
   .Card_Squad3 .txt_squad,
   .Card_Squad5 .txt_squad {
     position: absolute;
@@ -864,6 +864,30 @@ a {
     padding-top: 40px;
     margin: 0 24%;
   }
+
+  /* SQUADS */
+  .Section_squads .Content_Squads {
+    margin: 0 60px;
+    padding: 70px 0;
+    gap: 30px;
+  }
+  .Section_squads .Content_Squads .Container_cards {
+    width: 160px;
+    height: 160px;
+  }
+  .Section_squads .Content_Squads .Container_cards .Card {
+    margin: 0;
+  }
+  .Section_squads .Content_Squads .Container_cards .Card .Box {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 160px;
+    height: 160px;
+  }
+
+  /* COMMUNITY */
   .Contain_community {
     justify-content: center;
     margin: 0;
@@ -1717,6 +1741,7 @@ a .Card_telegram {
 }
 .Pagos .p_contenido {
   margin: 40px 10%;
+  font-weight: 300;
   color: #fff;
   line-height: 25px;
 }
@@ -1824,6 +1849,7 @@ a .Card_telegram {
   margin: 20px 0;
   padding: 8px 15px;
   border-radius: 5px;
+  font-weight: 400;
   color: #5f5f5f;
   background: #ffd600;
 }
@@ -1955,6 +1981,7 @@ a .Card_telegram {
   margin: 20px 0;
   padding: 8px 15px;
   border-radius: 5px;
+  font-weight: 400;
   color: #5f5f5f;
   background: #ffd600;
   margin-top: 30px;
@@ -1981,6 +2008,7 @@ a .Card_telegram {
   margin: 20px 0;
   padding: 8px 15px;
   border-radius: 5px;
+  font-weight: 400;
   color: #5f5f5f;
   background: #ffd600;
   margin-top: 30px;
@@ -2008,6 +2036,7 @@ a .Card_telegram {
   margin: 20px 0;
   padding: 8px 15px;
   border-radius: 5px;
+  font-weight: 400;
   color: #5f5f5f;
   background: #ffd600;
   margin-top: 30px;
@@ -2018,13 +2047,25 @@ a .Card_telegram {
 }
 
 /* RESPONSIVE PAGOS */
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 1015px) {
+  .Pagos .sci li:hover::before {
+    opacity: 0;
+  }
+  .Pagos .contain_pago_paypal,
+  .Pagos .contain_pago_banco,
+  .Pagos .contain_pago_btc,
+  .Pagos .contain_pago_eth {
+    padding-top: 20px;
+  }
+}
+
+@media screen and (max-width: 520px) {
   .Pagos .sci {
     width: 100%;
-    margin: 30px auto 0;
+    margin: 30px 0 0;
   }
   .Pagos .sci li {
-    margin: 10px;
+    margin: 4%;
   }
   .Pagos .sci li a {
     width: 60px;
